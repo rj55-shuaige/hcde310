@@ -12,7 +12,10 @@ exhibits = [
 ]
 
 # 1. Print each exhibit on its own line, numbered starting at 1:   1. The Art of Everyday Life
-
+count = 0
+for i in exhibits:
+    count += 1
+print(count, ".", exhibits[i])
 # 2. Print a blank line, then each exhibit in ALL CAPS followed by its length:   PAPER CUTS 10
 
 # 3. Print a blank line, then how many exhibit names contain the word "the" (any case):   With "the": 3
