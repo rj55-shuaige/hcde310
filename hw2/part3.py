@@ -10,3 +10,23 @@
 
 from artworks import artworks
 
+counts = {}
+
+for artwork in artworks:
+    artist = artwork.get("artist", "Unknown")
+    if artist in counts:
+        counts[artist] += 1
+    else: 
+        counts[artist] = 1
+
+print(counts)
+
+most_artist = ""
+most_counts = 0
+
+for artist in counts:
+    if counts[artist] > most_counts:
+        most_counts = counts[artist]
+        most_artist = artist
+
+print(f"Most works: {most_artist} ({most_counts})")

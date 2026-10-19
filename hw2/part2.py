@@ -5,3 +5,10 @@
 
 from artworks import artworks
 
+for artwork in artworks:
+    title = artwork.get("title", "Unknown")
+    artist = artwork.get("artist", "Unknown")
+    year = artwork.get("year", "Unknown")
+    print(f"{title} - {artist} ({year})")
+
+

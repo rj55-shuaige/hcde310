@@ -9,17 +9,30 @@
 #
 # Don't change the `print` lines at the bottom of `part4.py`. `check.py` uses them.
 
+from itertools import count
+
 from artworks import artworks
 
 
 def works_by(artist, artworks):
-    """TODO: one line saying what it takes and what it returns."""
-    pass
+    """Takes an artist name and a list of artworks, returns a list of titles by that artist"""
+    titles = []
+    for artwork in artworks:
+        if artwork.get("artist", "Unknown") == artist:
+            titles.append(artwork.get("title", "Unknown"))
+    return titles
 
 
 def count_by_artist(artworks):
-    """TODO: one line saying what it takes and what it returns."""
-    pass
+    """Takes a list of artworks, returns a dictionary counting works by artist"""
+    counts = {}
+    for artwork in artworks:
+        artist = artwork.get("artist", "Unknown")
+        if artist in counts:
+            counts[artist] += 1
+        else:
+            counts[artist] = 1
+    return counts
 
 
 print(works_by("Claude Monet", artworks))
