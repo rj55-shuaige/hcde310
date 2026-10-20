@@ -9,3 +9,13 @@
 import os
 import requests
 from dotenv import load_dotenv
+load_dotenv()
+api_key = os.getenv("NASA_API_KEY")
+url = "https://api.nasa.gov/EPIC/api/natural"
+r = requests.get(url, params={"api_key": api_key}, timeout=10)
+print(r.status_code)
+if r.status_code == 200: 
+    data = r.json()
+    first_photo = data[0]
+    print(first_photo["caption"])
+    print(first_photo["date"])
