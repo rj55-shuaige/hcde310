@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Art Results</title>
+</head>
+<body>
+    <h1>Results for "{{ search_term }}"</h1>
+    
+    {% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+
+    {% for artwork in artworks %}
+        <h2>{{ artwork.title }}</h2>
+        <p>Artist: {{ artwork.artist_title }}</p>
+        <p>Date: {{ artwork.date_display }}</p>
+    {% endfor %}
+
+    <a href="/">Search again</a>
+</body>
