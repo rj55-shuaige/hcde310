@@ -18,13 +18,21 @@ def results():
     author = request.args.get("author_search", "")
 
     # 2. Empty input? → home page + message (check BEFORE calling the API)
-
+    if author.strip() == "":
+        return render_template(
+            "home.html",
+            message="Please enter an author name and try again."
+        )
     # 3. Call the API (fake data for now)
     books = get_books(author)
 
     # 4. API error? (get_books returned None) → home page + message
-
+    if books is None:
+        return render_template(
+            "home.html",
+            message="Something went wrong. Please try again."
+        )
     # 5. No results, or nothing useful to show? → home page + message
-
+  
     # 6. Otherwise → results page
     return render_template("results.html", books=books, author=author)
