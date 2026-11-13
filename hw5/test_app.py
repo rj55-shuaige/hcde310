@@ -15,3 +15,16 @@ def test_empty_search():
 
     assert page.status_code == 200
     assert b"No search term entered." in page.data
+
+def test_api_error(monkeypatch):
+    def fake_get_artworks(artist):
+        raise Exception("Secret internal error")
+
+    monkeypatch.setattr("app.get_artworks", fake_get_artworks)
+
+    client = app.test_client()
+    page = client.post("/results", data={"artist": "Monet"})
+
+    assert page.status_code == 200
+    assert b"Sorry, something went wrong." in page.data
+    assert b"Secret internal error" not in page.data
