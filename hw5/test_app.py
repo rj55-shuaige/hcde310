@@ -8,3 +8,10 @@ def test_home_shows_search_form():
     page = client.get("/")            # like typing "/" in the address bar
     assert page.status_code == 200    # the page loaded
     assert b"Artist name" in page.data  # the form's label is on the page
+
+def test_empty_search():
+    client = app.test_client()
+    page = client.post("/results", data={"artist": ""})
+
+    assert page.status_code == 200
+    assert b"No search term entered." in page.data
