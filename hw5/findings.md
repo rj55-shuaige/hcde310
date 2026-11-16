@@ -44,8 +44,12 @@ Commit before: 393519b  Commit after: 53e38fd
 
 ## 6. Can we ship it? (100–150 words)
 Yes or no, and why:
+I don't think we should ship this app tomorrow because it still has some problems. When I searched for a random name like "cgfytfjgy67", the app still showed artworks that were not related to my search. Also, some images did not load correctly. This could confuse users and make the website less useful. Even though I fixed the error message problem and all three pytest tests passed, I think we still need more testing before releasing the app.
 
 One thing my HW4 does better:
+Compared to this AI-generated app, my HW4 does a better job of checking user input and handling empty searches.
+
 One thing the AI's app does better:
+The AI-generated app uses a timeout for API requests, which can prevent the website from waiting too long.
 
 AI use goes in `ai_use.md` (the five points on the AI Use Card).

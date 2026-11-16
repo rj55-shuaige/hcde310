@@ -24,3 +24,5 @@ def results():
 
 if __name__ == "__main__":
     app.run(debug=True)
+if artworks == []:
+    return render_template("home.html", message="No artworks found. Try another search.")
