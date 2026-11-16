@@ -1,7 +1,8 @@
 # HW5 findings
 
 ## 1. Drawing: one search for "Monet"
-(photo here)
+
+![Search for monet](search.jpg)
 
 ## 2. Two questions about the code
 1. What do request.values.get("artist") do and why use "strip" after that
