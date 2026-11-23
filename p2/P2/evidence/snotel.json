@@ -1,0 +1,41 @@
+[
+  {
+    "stationTriplet": "642:WA:SNTL",
+    "data": [
+      {
+        "stationElement": {
+          "elementCode": "SNWD",
+          "durationName": "DAILY",
+          "storedUnitCode": "in"
+        },
+        "values": [
+          {"date": "2026-11-14", "value": 6},
+          {"date": "2026-11-15", "value": 8},
+          {"date": "2026-11-16", "value": 8},
+          {"date": "2026-11-17", "value": 5},
+          {"date": "2026-11-18", "value": 8},
+          {"date": "2026-11-19", "value": 10},
+          {"date": "2026-11-20", "value": 10},
+          {"date": "2026-11-21", "value": 12}
+        ]
+      },
+      {
+        "stationElement": {
+          "elementCode": "WTEQ",
+          "durationName": "DAILY",
+          "storedUnitCode": "in"
+        },
+        "values": [
+          {"date": "2026-11-14", "value": 2.7},
+          {"date": "2026-11-15", "value": 2.8},
+          {"date": "2026-11-16", "value": 2.9},
+          {"date": "2026-11-17", "value": 2.9},
+          {"date": "2026-11-18", "value": 3.0},
+          {"date": "2026-11-19", "value": 3.2},
+          {"date": "2026-11-20", "value": 3.1},
+          {"date": "2026-11-21", "value": 3.2}
+        ]
+      }
+    ]
+  }
+]
